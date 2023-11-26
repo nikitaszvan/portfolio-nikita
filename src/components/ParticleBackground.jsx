@@ -9,7 +9,7 @@ const ParticleBackground = () => {
     }, []);
 
     const particlesLoaded = useCallback(async (container) => {
-        await console.log(container);
+        console.log(container);
     }, []);
 
     return(<div className="moving-background">
@@ -18,10 +18,10 @@ const ParticleBackground = () => {
     init={particlesInit}
     loaded={particlesLoaded}
     options={{
+        fullScreen: { enable: false },
         background: {
-            color: {
-                value: "#0d47a1",
-            },
+            image: "url('./images/background.png')",
+            size: "100% 100%"
         },
         fpsLimit: 120,
         interactivity: {
@@ -41,7 +41,7 @@ const ParticleBackground = () => {
                     quantity: 4,
                 },
                 repulse: {
-                    distance: 100,
+                    distance: 10,
                     duration: 0.4,
                 },
             },
@@ -52,9 +52,9 @@ const ParticleBackground = () => {
             },
             links: {
                 color: "#ffffff",
-                distance: 150,
+                distance: 75,
                 enable: true,
-                opacity: 0.5,
+                opacity: 0.9,
                 width: 1,
             },
             move: {
@@ -70,18 +70,18 @@ const ParticleBackground = () => {
             number: {
                 density: {
                     enable: true,
-                    area: 800,
+                    area: 400,
                 },
-                value: 60,
+                value: 80,
             },
             opacity: {
-                value: 0.5,
+                value: 0.9,
             },
             shape: {
                 type: "circle",
             },
             size: {
-                value: { min: 1, max: 5 },
+                value: { min: 0.5, max: 2 },
             },
         },
         detectRetina: true,

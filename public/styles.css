@@ -1,8 +1,23 @@
-.moving-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh; /* Adjust this value to control the height of the particle background */
-    z-index: -1; /* Ensure the particle background is behind other content */
-  }
+#tsparticles {
+    height: 400px;
+    filter: grayscale(70%);
+    z-index: 0;
+    position: relative;
+}
+
+.text-over-bg {
+    font-size: 20px;
+    font-family: 'Rubik';
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+    color: white;
+    z-index: 1;
+    position: relative;
+    position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+body {
+    margin: 0;
+}
