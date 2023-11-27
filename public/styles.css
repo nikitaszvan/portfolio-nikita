@@ -1,23 +1,53 @@
 #tsparticles {
-    height: 400px;
-    filter: grayscale(70%);
+    background-image: linear-gradient(white, black);
+    height: 900px;
+    width: 1920px;
+    filter: grayscale(80%) blur(1px);
     z-index: 0;
     position: relative;
+
+}
+
+.over-background{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
 }
 
 .text-over-bg {
+    width: 1920px;
     font-size: 20px;
     font-family: 'Rubik';
-    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
-1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
     color: white;
     z-index: 1;
     position: relative;
-    position: absolute;
-  top: 0%;
-  left: 0%;
+    float: left;
 }
 
 body {
     margin: 0;
+}
+
+.left-trapezoid {
+    width: 1200px;
+    height: 150px;
+    background: #9d535986;
+    transform: perspective(9px) rotateX(1deg);
+    rotate: 180deg;
+    translate: -90px 0; 
+}
+
+.right-trapezoid {
+    width: 700px;
+    height: 150px;
+    background: #9d5359;
+    transform: perspective(5px) rotateX(1deg);
+    rotate: 180deg;
+    translate: 1400px -150px; 
+}
+
+.self-portrait {
+    float: right;
+    margin: -400px 400px 0 0;
 }
