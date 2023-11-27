@@ -11,9 +11,10 @@ function App() {
           <div className="right-trapezoid"></div>
         </div>
         <div className="text-over-bg">
-          <h1>Hi, my name is Nikita and I'm a full-stack developer</h1>
+          <h1>Hi, my name is Nikita and I'm a <span> full-stack developer </span></h1>
           <p>Hi, my name is Nikita and I'm a full-stack developer</p>
-          <img className="self-portrait" src="images/nikita.png" alt="portrait"/>
+          <div className="portrait-container">
+          <img className="self-portrait" src="images/nikita.png" alt="portrait"/></div>
         </div>
       </div>
   </div>

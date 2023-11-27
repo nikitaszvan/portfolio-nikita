@@ -1,5 +1,5 @@
 #tsparticles {
-    height: 900px;
+    height: 935px;
     width: 1920px;
     z-index: -2;
     position: relative;
@@ -10,7 +10,7 @@
     top: 0%;
     left: 0%;
     background-image: linear-gradient(transparent, black);
-        width: 1920px;
+    width: 1920px;
 }
 
 .over-background{
@@ -34,6 +34,10 @@ body {
     margin: 0;
 }
 
+.header-container {
+    overflow: hidden;
+}
+
 .left-trapezoid {
     width: 1200px;
     height: 150px;
@@ -52,7 +56,26 @@ body {
     translate: 1400px -150px; 
 }
 
-.self-portrait {
+.portrait-container {
     float: right;
-    margin: -400px 400px 0 0;
+    margin: -420px 400px 0 0;
+    height: 790px;
+    overflow: hidden;
+}
+
+.self-portrait {
+    height: 810px;
+}
+
+.text-over-bg h1 {
+    color: #2E1619;
+}
+
+.text-over-bg h1, .text-over-bg p {
+    margin-left: 25%;
+    width: 25%;
+}
+
+.text-over-bg h1 span {
+    color: #cfc5c1;
 }
