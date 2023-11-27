@@ -1,18 +1,23 @@
 #tsparticles {
-    background-image: linear-gradient(white, black);
     height: 900px;
     width: 1920px;
-    filter: grayscale(80%) blur(1px);
-    z-index: 0;
+    z-index: -2;
     position: relative;
+}
 
+.moving-background {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-image: linear-gradient(transparent, black);
+        width: 1920px;
 }
 
 .over-background{
     position: absolute;
     top: 0%;
     left: 0%;
-    width: 100%;
+    width: 1920px;
 }
 
 .text-over-bg {
