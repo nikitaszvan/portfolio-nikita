@@ -20,6 +20,7 @@
     width: 1920px;
     height: 935px;
     overflow: hidden;
+    z-index: 1;
 }
 
 .text-over-bg {
@@ -42,10 +43,30 @@ body {
     .left-trapezoid {
         width: 1200px;
         height: 150px;
-        background: #9d535986;
+        background-color: #9d535986;
         transform: perspective(9px) rotateX(1deg);
         rotate: 180deg;
         translate: -90px 0; 
+    }
+
+    .nav-bar {
+        width: 1200px;
+        height: 75px;
+        background-color: rgba(197, 90, 99, 0.468);
+        translate: 390px -150px; 
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(197, 90, 99, 0.468), rgba(197, 90, 99, 0.468), rgba(0, 0, 0, 0));
+        z-index: 5;
+        position: relative;
+
+    }
+
+    .nav-bar-underline {
+        width: 1200px;
+        height: 1px;
+        translate: 390px -150px;
+        background: linear-gradient(to right, #c5c29fc1, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), #C5c29Fc1);
+        z-index: 5;
+        position: relative;
     }
 
     .right-trapezoid {
@@ -54,7 +75,7 @@ body {
         background: #9d5359;
         transform: perspective(5px) rotateX(1deg);
         rotate: 180deg;
-        translate: 1400px -150px; 
+        translate: 1400px -200px; 
     }
 }
 
@@ -74,27 +95,49 @@ body {
 }
 
 .text-over-bg {
-    margin-left: 25%;
-    width: 25%;
+    margin-left: 24%;
+    margin-right: -150px;
+    margin-top: 150px;
+    width: 35%;
+    clear: both;
 
     > * {
         margin: 50px 0 0 20px;
     }
 
-    h1 {
-        font-size: 40px;
-        color: #0E1925;
+    // h1 {
+    //     margin-right: -25px;
+    //     color: #0E1925;
+    // }
+
+
+    h1 > span {
+        text-decoration: none;
+        color: #18272F;
+        font-weight: 700;
+        position: relative;
+      
+      
+      &::before {
+        content: '';
+        background-color: rgba(197, 90, 99, 0.468);
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        width: 100%;
+        height: 18px;
+        z-index: -3;
+        transition: all .3s ease-in-out;
+      }
+      
+      &:hover::before {
+        bottom: 0;
+        height: 100%;
+      }
     }
 
-    span {
-        color: #2E1619;
-    }
-
-    p {
-        color: #bbb9b6;
-    }
-
-    
 }
+    
+
 
 
