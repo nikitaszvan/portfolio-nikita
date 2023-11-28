@@ -10,7 +10,7 @@ const HeaderAnimation = () => {
         1000
     ]}
     wrapper="h2"
-    speed={50}
+    speed={25}
     style={{ fontSize: '50px'}}
     />
   );

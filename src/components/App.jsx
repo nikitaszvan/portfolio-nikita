@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import ParticleBackground from "./ParticleBackground";
 import HeaderAnimation from "./HeaderAnimation";
 import {SquareLoader} from 'react-spinners';
+import ScrollDown from "./ScrollDown.jsx";
  
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +33,7 @@ function App() {
       <div className="text-over-bg">
         <h1>Hi, I'm <span>Nikita Van</span></h1>
         <HeaderAnimation />
+        <ScrollDown />
       </div>
       <img src="images/nikita.png" alt="portrait"/>
     </div>
