@@ -59,12 +59,24 @@ body {
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(197, 90, 99, 0.468), rgba(197, 90, 99, 0.468), rgba(0, 0, 0, 0));
   z-index: 5;
   position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Unbounded";
+  font-size: 20px;
+  font-weight: 400;
+}
+.header-container .nav-bar > * {
+  display: inline;
+  text-decoration: none;
+  color: #0E1527;
+  padding: 25px 120px;
 }
 .header-container .nav-bar-underline {
   width: 1200px;
-  height: 2px;
+  height: 1.5px;
   translate: 390px -150px;
-  background: linear-gradient(to right, white, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), white);
+  background: linear-gradient(to right, #0E1527, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), #0E1527);
   z-index: 5;
   position: relative;
 }
@@ -81,6 +93,15 @@ body {
   height: 810px;
   position: relative;
   left: 550px;
+  animation: slideIn 1s ease-in-out; /* Using the animation property */
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(30%); /* Start off-screen at the bottom */
+  }
+  100% {
+    transform: translateY(0); /* Slide in to the normal position */
+  }
 }
 
 .text-over-bg {
@@ -96,8 +117,8 @@ body {
 }
 .text-over-bg h1 {
   font-size: 40px;
-  font-family: "Rokkitt";
-  font-weight: 200;
+  font-family: "DM Sans";
+  font-weight: 400;
 }
 .text-over-bg h1 > span {
   text-decoration: none;
@@ -126,18 +147,17 @@ body {
   font-weight: 500;
 }
 
-.nav-bar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: "Unbounded";
-  font-weight: 300;
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: rgba(0, 0, 0, 0);
+  inherits: false;
 }
-.nav-bar > * {
-  display: inline;
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
+a {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--myColor1), var(--myColor1), rgba(0, 0, 0, 0));
+  transition: --myColor1 1s;
+}
+a:hover {
+  --myColor1: rgba(255, 255, 255, 0.558);
 }
 
 /*# sourceMappingURL=styles.css.map */

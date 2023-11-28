@@ -17,7 +17,7 @@ function App() {
         <div className="header-container">
           <div className="left-trapezoid"></div>
           <div className="nav-bar">
-            <a href="/">ABOUT</a>
+            <a href="/">ABOUT ME</a>
             <a href="/">PORTFOLIO</a>
             <a href="/">WORK WITH ME</a>
           </div>
