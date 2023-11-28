@@ -6,12 +6,12 @@ const HeaderAnimation = () => {
   return (
     <TypeAnimation
     sequence={[
-        "I'm a Front-End Developer",
+        `I'm a Front-End \n Developer`,
         1000
     ]}
-    wrapper="span"
+    wrapper="h2"
     speed={50}
-    style={{ fontSize: '40px'}}
+    style={{ fontSize: '50px'}}
     />
   );
 };

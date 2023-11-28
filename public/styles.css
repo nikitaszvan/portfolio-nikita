@@ -9,7 +9,7 @@
   position: absolute;
   top: 0%;
   left: 0%;
-  background-image: linear-gradient(transparent, black);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.378), rgba(0, 0, 0, 0.411));
   width: 1920px;
 }
 
@@ -23,18 +23,21 @@
   z-index: 1;
 }
 
-.text-over-bg {
-  width: 100%;
-  font-size: 20px;
-  font-family: "Rubik";
-  color: white;
-  z-index: 1;
-  position: relative;
-  float: left;
-}
-
 body {
   margin: 0;
+}
+
+#loading-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #3498db;
+}
+
+.hidden {
+  display: none;
 }
 
 .header-container {
@@ -59,9 +62,9 @@ body {
 }
 .header-container .nav-bar-underline {
   width: 1200px;
-  height: 1px;
+  height: 2px;
   translate: 390px -150px;
-  background: linear-gradient(to right, rgba(197, 194, 159, 0.7568627451), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(197, 194, 159, 0.7568627451));
+  background: linear-gradient(to right, white, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), white);
   z-index: 5;
   position: relative;
 }
@@ -77,23 +80,28 @@ body {
 .over-background img {
   height: 810px;
   position: relative;
-  inset: 0;
+  left: 550px;
 }
 
 .text-over-bg {
-  margin-left: 24%;
-  margin-right: -150px;
-  margin-top: 150px;
-  width: 35%;
-  clear: both;
+  position: relative;
+  top: 100px;
+  left: 640px;
+  font-size: 30px;
+  font-family: "Rubik";
+  color: #0E1527;
+  z-index: 1;
+  position: relative;
+  float: left;
 }
-.text-over-bg > * {
-  margin: 50px 0 0 20px;
+.text-over-bg h1 {
+  font-size: 40px;
+  font-family: "Rokkitt";
+  font-weight: 200;
 }
 .text-over-bg h1 > span {
   text-decoration: none;
   color: #18272F;
-  font-weight: 700;
   position: relative;
 }
 .text-over-bg h1 > span::before {
@@ -110,6 +118,26 @@ body {
 .text-over-bg h1 > span:hover::before {
   bottom: 0;
   height: 100%;
+}
+.text-over-bg h2 {
+  width: 400px;
+  font-size: 60px;
+  font-family: "DM Sans";
+  font-weight: 500;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Unbounded";
+  font-weight: 300;
+}
+.nav-bar > * {
+  display: inline;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
