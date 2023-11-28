@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Unbounded";
+  src: url("./fonts/Unbounded-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url("./fonts/Unbounded-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("./fonts/DMSans_18pt-Black.ttf") format("truetype");
+}
 #tsparticles {
   height: 935px;
   width: 1920px;
@@ -63,8 +77,8 @@ body {
   justify-content: space-around;
   align-items: center;
   font-family: "Unbounded";
-  font-size: 20px;
   font-weight: 400;
+  font-size: 20px;
 }
 .header-container .nav-bar > * {
   display: inline;
@@ -105,11 +119,9 @@ body {
 }
 
 .text-over-bg {
-  position: relative;
   top: 100px;
   left: 640px;
   font-size: 30px;
-  font-family: "Rubik";
   color: #0E1527;
   z-index: 1;
   position: relative;
@@ -119,6 +131,15 @@ body {
   font-size: 40px;
   font-family: "DM Sans";
   font-weight: 400;
+  animation: slide 1s ease-in-out; /* Using the animation property */
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-300px); /* Start off-screen at the top */
+  }
+  100% {
+    transform: translateY(0); /* Slide in to the normal position */
+  }
 }
 .text-over-bg h1 > span {
   text-decoration: none;
