@@ -37,6 +37,7 @@ function App() {
       </div>
       <img src="images/nikita.png" alt="portrait"/>
     </div>
+    <div className="second-row"></div>
 </div>
     )
     :(<div><SquareLoader color="black" /></div>)

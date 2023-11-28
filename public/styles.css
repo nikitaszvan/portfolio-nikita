@@ -12,6 +12,11 @@
   font-family: "DM Sans";
   src: url("./fonts/DMSans_18pt-Black.ttf") format("truetype");
 }
+#root, .App {
+  width: 1920px;
+  height: 1vh;
+}
+
 #tsparticles {
   height: 935px;
   width: 1920px;
@@ -25,16 +30,6 @@
   left: 0%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.378), rgba(0, 0, 0, 0.411));
   width: 1920px;
-}
-
-.over-background {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 1920px;
-  height: 935px;
-  overflow: hidden;
-  z-index: 1;
 }
 
 body {
@@ -103,6 +98,16 @@ body {
   translate: 1400px -200px;
 }
 
+.over-background {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 1920px;
+  height: 935px;
+  overflow: hidden;
+  z-index: 1;
+  display: block;
+}
 .over-background img {
   height: 810px;
   position: relative;
@@ -131,15 +136,6 @@ body {
   font-size: 40px;
   font-family: "DM Sans";
   font-weight: 400;
-  animation: slide 1s ease-in-out; /* Using the animation property */
-}
-@keyframes slideDown {
-  0% {
-    transform: translateY(-300px); /* Start off-screen at the top */
-  }
-  100% {
-    transform: translateY(0); /* Slide in to the normal position */
-  }
 }
 .text-over-bg h1 > span {
   text-decoration: none;
@@ -245,6 +241,17 @@ a:hover {
     transform: translate(0, 10px) rotate(45deg);
     opacity: 0;
   }
+}
+.second-row {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(to right, #081020, #0F1426, #0F1426, #081020);
+  display: block;
+  z-index: 1;
+  position: relative;
+  top: 935px;
 }
 
 /*# sourceMappingURL=styles.css.map */
