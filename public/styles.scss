@@ -55,6 +55,7 @@ body {
 
 .header-container {
     height: 153.22px;
+    translate: 0 -49.6px; 
 
     .left-trapezoid {
         width: 1200px;
@@ -144,8 +145,8 @@ body {
 }
 
 .text-over-bg {
-    top: 100px;
-    left: 640px;
+    top: 150px;
+    left: 440px;
     font-size: 30px;
     color: #0E1527;
     z-index: 1;
@@ -156,8 +157,18 @@ body {
         font-size: 40px;
         font-family: 'DM Sans';
         font-weight: 400;
-
+        animation: slideDown 1s ease-in-out; /* Using the animation property */
       }
+  
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-100%); /* Start off-screen at the bottom */
+        }
+        100% {
+          transform: translateY(0); /* Slide in to the normal position */
+        }
+      }
+      
     
 
     h1 > span {
@@ -185,9 +196,10 @@ body {
 
     h2 {
         width: 400px;
-        font-size: 60px;
         font-family: 'DM Sans';
         font-weight: 500;
+        font-size: 60px;
+        color: white;
     }
 
 }
@@ -209,22 +221,15 @@ body {
 
 
   .scroll-arrow {
-    font-size: 200px;
-    color: white;
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    display: block;
-    text-align: center;
-    z-index: 100;
-    text-decoration: none;
-    text-shadow: 0;
-    width: 13px;
-    height: 13px;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
-    z-index: 9;
-    left: 50%;
+    font-size: 300px;
+    position: fixed;
+    z-index: 2;
+    width: 70px;
+    height: 70px;
+    left: 580px;
+    top: 780px;
+    border-bottom: 8px solid white;
+    border-right: 8px solid white;
     -webkit-transform: translate(-50%, 0%) rotate(45deg);
     -moz-transform: translate(-50%, 0%) rotate(45deg);
     transform: translate(-50%, 0%) rotate(45deg);
@@ -262,4 +267,15 @@ body {
   z-index: 1;
   position: relative;
   top: 935px;
+}
+
+.website-name {
+  font-family: 'Unbounded';
+  z-index: 2;
+  position: relative;
+  font-size: 40px;
+  width: 300px;
+  margin: 0;
+  top: 40px;
+  left: 30px;
 }

@@ -20,6 +20,7 @@ function App() {
     <div className="App">
     <ParticleBackground />
     <div className="over-background">
+    <h1 className="website-name">nikitav.dev</h1>
       <div className="header-container">
         <div className="left-trapezoid"></div>
         <div className="nav-bar">
@@ -37,7 +38,8 @@ function App() {
       </div>
       <img src="images/nikita.png" alt="portrait"/>
     </div>
-    <div className="second-row"></div>
+    <div className="second-row">
+    </div>
 </div>
     )
     :(<div><SquareLoader color="black" /></div>)
