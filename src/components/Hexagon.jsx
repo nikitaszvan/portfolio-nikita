@@ -2,12 +2,17 @@ import React from 'react';
 
 const Hexagon = () => {
   return (
-    <div>
-    <div className="first-part-hexagon-container">
-        <div className="hexagon-top"></div>
-        <div className="hexagon-bottom"></div>
+    <div className="hexagon">
+    <div className="border-part-hexagon-container">
+        <div className="hexagon-top-bp"></div>
+        <div className="hexagon-bottom-bp"></div>
     </div>
-    <div className="second-part-hexagon-container">
+
+    <div className="background-hexagon-container">
+        <div className="hexagon-top-bg"></div>
+        <div className="hexagon-bottom-bg"></div>
+    </div>
+    <div className="front-part-hexagon-container">
     <div className="hexagon-top"></div>
     <div className="hexagon-bottom"></div>
 </div>

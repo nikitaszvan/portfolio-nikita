@@ -262,6 +262,7 @@ a:hover {
   padding: 0;
   width: 100%;
   height: 700px;
+  background: linear-gradient(to right, #081020, #0F1426, #0F1426, #081020);
   display: block;
   z-index: -2;
   position: relative;
@@ -279,30 +280,57 @@ a:hover {
   left: 30px;
 }
 
-.first-part-hexagon-container, .second-part-hexagon-container {
-  transform: rotate(60deg);
+.front-part-hexagon-container {
+  transform: rotate(90deg) translateX(-475px);
 }
-.first-part-hexagon-container > *, .second-part-hexagon-container > * {
-  width: 120px; /* Adjust the width to twice the size of the border */
-  height: 70px;
-  border-left: 60px solid transparent; /* Adjust the border values */
-  border-right: 60px solid transparent;
+.front-part-hexagon-container > * {
+  width: 140px; /* Adjust the width to twice the size of the border */
+  border-left: 70px solid transparent; /* Adjust the border values */
+  border-right: 70px solid transparent;
 }
-
-.first-part-hexagon-container {
-  transform: rotate(60deg);
+.front-part-hexagon-container .hexagon-top {
+  border-bottom: 121px solid #E8D9C8; /* Adjust the border value to create the hexagon shape */
 }
-
-.second-part-hexagon-container {
-  transform: translateY(-350px) rotate(120deg);
+.front-part-hexagon-container .hexagon-bottom {
+  border-top: 121px solid #E8D9C8; /* Adjust the border value to create the hexagon shape */
 }
 
-.hexagon-top {
-  border-bottom: 104px solid white; /* Adjust the border value to create the hexagon shape */
+.background-hexagon-container {
+  transform: rotate(90deg) translateX(-240px);
+}
+.background-hexagon-container > * {
+  width: 180px; /* Adjust the width to twice the size of the border */
+  border-left: 90px solid transparent; /* Adjust the border values */
+  border-right: 90px solid transparent;
+}
+.background-hexagon-container .hexagon-top-bg {
+  border-bottom: 156px solid #0F1426;
+}
+.background-hexagon-container .hexagon-bottom-bg {
+  border-top: 156px solid #0F1426;
 }
 
-.hexagon-bottom {
-  border-top: 104px solid white; /* Adjust the border value to create the hexagon shape */
+.hexagon-bottom, .hexagon-bottom-bg, .hexagon-bottom-bp {
+  transform: translateY(-0.25px);
+}
+
+.hexagon-top, .hexagon-bottom-top, .hexagon-bottom-top {
+  transform: translateY(0.25px);
+}
+
+.border-part-hexagon-container {
+  transform: rotate(90deg) translateX(60px);
+}
+.border-part-hexagon-container > * {
+  width: 200px; /* Adjust the width to twice the size of the border */
+  border-left: 100px solid transparent; /* Adjust the border values */
+  border-right: 100px solid transparent;
+}
+.border-part-hexagon-container .hexagon-top-bp {
+  border-bottom: 173px solid #B4666D;
+}
+.border-part-hexagon-container .hexagon-bottom-bp {
+  border-top: 173px solid #B4666D;
 }
 
 .hexagon-container {
@@ -310,25 +338,9 @@ a:hover {
   justify-content: center;
 }
 
-.parallelogram-container > * {
-  display: inline;
-}
-
-.left-parallelogram_1 {
-  height: 300px;
-  width: 300px;
-  background-color: rgba(255, 0, 0, 0.595);
-  transform: rotateX(10deg) rotateY(35deg) translateX(-25px) translateY(-10px);
-}
-
-.banner {
-  background-image: url("./images/banner_template.PNG");
-  background-size: 1920px 280px;
-  width: 1920px;
-  height: 400px;
-  z-index: 3;
-  position: relative;
-  top: -20px;
+.hexagon {
+  margin-left: 34px;
+  margin-right: 34px;
 }
 
 /*# sourceMappingURL=styles.css.map */
