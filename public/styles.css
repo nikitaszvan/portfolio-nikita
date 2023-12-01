@@ -28,7 +28,7 @@
   position: absolute;
   top: 0%;
   left: 0%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.378), rgba(0, 0, 0, 0.411));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.411), rgba(28, 82, 33, 0.184), rgba(255, 255, 255, 0.884));
   width: 1920px;
 }
 
@@ -139,7 +139,7 @@ body {
   font-family: "DM Sans";
   font-weight: 500;
   font-size: 60px;
-  color: #eedece;
+  color: white;
   pointer-events: none;
 }
 .text-over-bg p {
@@ -328,14 +328,66 @@ a:hover {
   margin: 0;
 }
 
-.hexagon-gradient {
+.hexagon-gradient-back {
   width: 1266px;
   height: 405px;
   position: relative;
   top: -410px;
   left: 327px;
-  background-image: linear-gradient(to top, rgba(14, 20, 37, 0.897), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(14, 20, 37, 0.403), rgba(0, 0, 0, 0));
   z-index: 2;
+}
+
+.hexagon-gradient-front {
+  width: 1266px;
+  height: 405px;
+  position: relative;
+  top: -815px;
+  left: 327px;
+  background-image: linear-gradient(to top, rgba(14, 20, 37, 0.401), rgba(0, 0, 0, 0));
+  z-index: 4;
+}
+
+.hexagon-images {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -1110px;
+  z-index: 5;
+  gap: 335px;
+}
+.hexagon-images img:nth-child(1) {
+  width: 135px;
+  height: 135px;
+  position: relative;
+  top: 35px;
+  right: 5px;
+  transition: transform 1s ease;
+}
+.hexagon-images img:nth-child(1):hover {
+  transform: scale(1.2);
+}
+.hexagon-images img:nth-child(2) {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  top: 40px;
+  right: 8px;
+  transition: transform 1s ease;
+}
+.hexagon-images img:nth-child(2):hover {
+  transform: scale(1.2);
+}
+.hexagon-images img:nth-child(3) {
+  width: 115px;
+  height: 115px;
+  position: relative;
+  top: 45px;
+  right: 5px;
+  transition: transform 1s ease;
+}
+.hexagon-images img:nth-child(3):hover {
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=styles.css.map */
