@@ -140,6 +140,7 @@ body {
   font-weight: 500;
   font-size: 60px;
   color: #eedece;
+  pointer-events: none;
 }
 .text-over-bg p {
   font-family: "Unbounded";
@@ -149,6 +150,7 @@ body {
   width: 500px;
   margin-top: 0;
   color: black;
+  pointer-events: none;
 }
 .text-over-bg .scroll-arrow {
   position: relative;
@@ -241,10 +243,11 @@ a:hover {
   margin: 0;
   top: 40px;
   left: 30px;
+  pointer-events: none;
 }
 
 .front-part-hexagon-container {
-  transform: rotate(90deg) translateX(-475px);
+  transform: rotate(90deg);
 }
 .front-part-hexagon-container > * {
   width: 140px;
@@ -261,7 +264,7 @@ a:hover {
 }
 
 .background-hexagon-container {
-  transform: rotate(90deg) translateX(-240px);
+  transform: rotate(90deg);
 }
 .background-hexagon-container > * {
   width: 180px; /* Adjust the width to twice the size of the border */
@@ -286,7 +289,7 @@ a:hover {
 }
 
 .border-part-hexagon-container {
-  transform: rotate(90deg) translateX(60px);
+  transform: rotate(90deg);
 }
 .border-part-hexagon-container > * {
   width: 200px; /* Adjust the width to twice the size of the border */
@@ -305,11 +308,34 @@ a:hover {
 .hexagon-container {
   display: flex;
   justify-content: center;
+  gap: 60px;
+  height: 460px;
+}
+.hexagon-container .hexagon .border-part-hexagon-container {
+  position: relative;
+  top: 80px;
+}
+.hexagon-container .hexagon .background-hexagon-container {
+  position: relative;
+  bottom: 220px;
+}
+.hexagon-container .hexagon .front-part-hexagon-container {
+  position: relative;
+  bottom: 455px;
+  z-index: 3;
+}
+.hexagon-container .hexagon > * {
+  margin: 0;
 }
 
-.hexagon {
-  margin-left: 34px;
-  margin-right: 34px;
+.hexagon-gradient {
+  width: 1266px;
+  height: 405px;
+  position: relative;
+  top: -410px;
+  left: 327px;
+  background-image: linear-gradient(to top, rgba(14, 20, 37, 0.897), rgba(0, 0, 0, 0));
+  z-index: 2;
 }
 
 /*# sourceMappingURL=styles.css.map */
