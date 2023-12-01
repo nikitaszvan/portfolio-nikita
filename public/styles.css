@@ -112,7 +112,7 @@ body {
   height: 860px;
   position: relative;
   bottom: 74px;
-  left: 450px;
+  left: 300px;
   animation: slideIn 1s ease-in-out; /* Using the animation property */
 }
 @keyframes slideIn {
@@ -125,65 +125,46 @@ body {
 }
 
 .text-over-bg {
-  top: 45px;
-  left: 430px;
+  top: 225px;
+  left: 330px;
   font-size: 30px;
   color: #0E1527;
   z-index: 1;
   position: relative;
   float: left;
 }
-.text-over-bg h1 {
-  font-size: 80px;
-  font-family: "DM Sans";
-  font-weight: 400;
-  animation: slideDown 1s ease-in-out;
-  margin-bottom: 20px;
-}
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%); /* Start off-screen at the bottom */
-  }
-  100% {
-    transform: translateY(0); /* Slide in to the normal position */
-  }
-}
-.text-over-bg h1 > span {
-  text-decoration: none;
-  color: #18272F;
+.text-over-bg h2 {
   position: relative;
-}
-.text-over-bg h1 > span::before {
-  content: "";
-  background-color: rgba(197, 90, 99, 0.468);
-  position: absolute;
-  left: 0;
-  bottom: 20px;
-  width: 100%;
-  height: 20px;
-  z-index: -3;
-  transition: all 0.3s ease-in-out;
-}
-.text-over-bg h1 > span:hover::before {
-  bottom: 0;
-  height: 100%;
+  width: 800px;
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 60px;
+  color: #eedece;
 }
 .text-over-bg p {
-  font-family: "DM Sans";
+  font-family: "Unbounded";
+  bottom: 30px;
   font-size: 25px;
-  position: absolute;
-  top: 350px;
+  position: relative;
   width: 500px;
   margin-top: 0;
   color: black;
 }
-.text-over-bg h2 {
-  margin-top: 0;
-  width: 400px;
-  font-family: "DM Sans";
-  font-weight: 500;
-  font-size: 60px;
-  color: white;
+.text-over-bg .scroll-arrow {
+  position: relative;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  left: 300px;
+  top: 50px;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.611);
+  border-right: 8px solid rgba(255, 255, 255, 0.611);
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation: fade_move_down 4s ease-in-out infinite;
+  animation: fade_move_down 4s ease-in-out infinite;
 }
 
 @property --myColor1 {
@@ -197,24 +178,6 @@ a {
 }
 a:hover {
   --myColor1: rgba(255, 255, 255, 0.558);
-}
-
-.scroll-arrow {
-  font-size: 300px;
-  position: absolute;
-  z-index: 2;
-  width: 70px;
-  height: 70px;
-  left: 300px;
-  top: 520px;
-  border-bottom: 8px solid rgba(255, 255, 255, 0.611);
-  border-right: 8px solid rgba(255, 255, 255, 0.611);
-  -webkit-transform: translate(-50%, 0%) rotate(45deg);
-  -moz-transform: translate(-50%, 0%) rotate(45deg);
-  transform: translate(-50%, 0%) rotate(45deg);
-  -webkit-animation: fade_move_down 4s ease-in-out infinite;
-  -moz-animation: fade_move_down 4s ease-in-out infinite;
-  animation: fade_move_down 4s ease-in-out infinite;
 }
 
 /*animated scroll arrow animation*/
@@ -284,15 +247,17 @@ a:hover {
   transform: rotate(90deg) translateX(-475px);
 }
 .front-part-hexagon-container > * {
-  width: 140px; /* Adjust the width to twice the size of the border */
-  border-left: 70px solid transparent; /* Adjust the border values */
+  width: 140px;
+  border-left: 70px solid transparent;
   border-right: 70px solid transparent;
 }
 .front-part-hexagon-container .hexagon-top {
-  border-bottom: 121px solid #E8D9C8; /* Adjust the border value to create the hexagon shape */
+  border-bottom-style: solid;
+  border-bottom-width: 121px;
 }
 .front-part-hexagon-container .hexagon-bottom {
-  border-top: 121px solid #E8D9C8; /* Adjust the border value to create the hexagon shape */
+  border-top-style: solid;
+  border-top-width: 121px;
 }
 
 .background-hexagon-container {
@@ -304,10 +269,12 @@ a:hover {
   border-right: 90px solid transparent;
 }
 .background-hexagon-container .hexagon-top-bg {
-  border-bottom: 156px solid #0F1426;
+  border-bottom-style: solid;
+  border-bottom-width: 156px;
 }
 .background-hexagon-container .hexagon-bottom-bg {
-  border-top: 156px solid #0F1426;
+  border-top-style: solid;
+  border-top-width: 156px;
 }
 
 .hexagon-bottom, .hexagon-bottom-bg, .hexagon-bottom-bp {
@@ -327,10 +294,12 @@ a:hover {
   border-right: 100px solid transparent;
 }
 .border-part-hexagon-container .hexagon-top-bp {
-  border-bottom: 173px solid #B4666D;
+  border-bottom-style: solid;
+  border-bottom-width: 173px;
 }
 .border-part-hexagon-container .hexagon-bottom-bp {
-  border-top: 173px solid #B4666D;
+  border-top-style: solid;
+  border-top-width: 173px;
 }
 
 .hexagon-container {

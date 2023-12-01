@@ -20,10 +20,9 @@ const FirstSection = () => {
             <div className="right-trapezoid"></div>
         </div>
         <div className="text-over-bg">
-            <h1>Hi, I'm <span>Nikita Van</span></h1>
             <HeaderAnimation />
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            I'm Nikita Van and I will showcase my professional works and personal projects.
             </p>
             <ScrollDown />
         </div>
