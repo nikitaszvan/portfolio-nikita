@@ -16,6 +16,22 @@
   src: url('./fonts/DMSans_18pt-Black.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Rubik Bold';
+  src: url('./fonts/Rubik-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Meera Inimai';
+  src: url('./fonts/MeeraInimai-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-SemiBold.ttf') format('truetype');
+}
+
+
 #root, .App {
   width: 1920px;
   height: 1vh;
@@ -199,7 +215,7 @@ body {
     h2 {
       position: relative;
       width: 800px;
-      font-family: 'DM Sans';
+      font-family: 'Rubik Bold';
       font-weight: 500;
       font-size: 60px;
       color: white;
@@ -207,11 +223,11 @@ body {
     }
 
     p {
-      font-family: 'Unbounded';
+      font-family: 'Raleway';
       bottom: 30px;
-      font-size: 25px;
+      font-size: 45px;
       position: relative;
-      width: 500px;
+      width: 800px;
       margin-top: 0;
       color: black;
       pointer-events: none;
@@ -395,7 +411,7 @@ body {
   position: relative;
   top: -410px;
   left: 327px;
-  background-image: linear-gradient(to top, rgba(14, 20, 37, 0.403), rgb(0,0,0,0));
+  background-image: linear-gradient(to top, rgba(14, 20, 37, 0.273), rgb(0,0,0,0));
   z-index: 2;
 }
 
@@ -405,7 +421,7 @@ body {
   position: relative;
   top: -815px;
   left: 327px;
-  background-image: linear-gradient(to top, rgba(14, 20, 37, 0.401), rgb(0,0,0,0));
+  background-image: linear-gradient(to top, rgba(14, 20, 37, 0.271), rgb(0,0,0,0));
   z-index: 4;
 }
 
@@ -426,7 +442,7 @@ body {
     transition: transform 1s ease;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.3);
     }
   }
 
@@ -439,7 +455,7 @@ body {
     transition: transform 1s ease;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.3);
     }
   }
 
@@ -452,7 +468,7 @@ body {
     transition: transform 1s ease;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.3);
     }
   }
 }
